@@ -1,0 +1,20 @@
+{
+  "$id": "https://sultry.ai/schemas/factor.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sultry Factor",
+  "type": "object",
+  "required": ["name","domain","severity"],
+  "properties": {
+    "name": {"type":"string"},
+    "domain": {"type":"string"},
+    "severity": {"type":"number","minimum":0.0,"maximum":1.0},
+    "mitre": {"type":"array","items":{"type":"string"}},
+    "stride": {"type":"array","items":{"type":"string"}},
+    "kill_chain": {"type":"array","items":{"type":"string"}},
+    "compliance": {"type":"array","items":{"type":"string"}},
+    "diamond": {"type":"object"},
+    "dread": {"type":"object"},
+    "notes": {"type":"string"}
+  },
+  "additionalProperties": true
+}

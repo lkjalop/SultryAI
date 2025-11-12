@@ -1,0 +1,471 @@
+[
+  {
+    "name": "honeypot_interaction",
+    "domain": "deception",
+    "severity": 0.95,
+    "mitre": [
+      "T1590"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [
+      "ISO27001.A.12.4",
+      "EU-AI-Act:HighRisk"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "recon",
+      "infrastructure": "scanned_service",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 5
+    }
+  },
+  {
+    "name": "canary_file_access",
+    "domain": "deception",
+    "severity": 0.97,
+    "mitre": [
+      "T1059"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Exploitation"
+    ],
+    "compliance": [
+      "ISO27001.A.8"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "data_access",
+      "infrastructure": "honeypot_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 6
+    }
+  },
+  {
+    "name": "fake_credential_used",
+    "domain": "deception",
+    "severity": 0.92,
+    "mitre": [
+      "T1078"
+    ],
+    "stride": [
+      "Repudiation",
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Installation"
+    ],
+    "compliance": [
+      "ISO27001.A.9"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_use",
+      "infrastructure": "auth_service",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "tripwire_triggered",
+    "domain": "deception",
+    "severity": 0.88,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "probe",
+      "infrastructure": "tripwire",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "smb_canary_access",
+    "domain": "deception",
+    "severity": 0.93,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [
+      "ISO27001.A.12.4"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "file_access",
+      "infrastructure": "smb_share",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 6
+    }
+  },
+  {
+    "name": "package_installation_on_honeypot",
+    "domain": "deception",
+    "severity": 0.86,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Installation"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "tooling",
+      "infrastructure": "honeypot_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 5
+    }
+  },
+  {
+    "name": "high_frequency_honeypot_hits",
+    "domain": "deception",
+    "severity": 0.9,
+    "mitre": [],
+    "stride": [
+      "Reconnaissance"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "automated_scanning",
+      "infrastructure": "botnet",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "honeypot_interaction",
+    "domain": "deception",
+    "severity": 0.95,
+    "mitre": [
+      "T1590"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [
+      "ISO27001.A.12.4",
+      "EU-AI-Act:HighRisk"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "recon",
+      "infrastructure": "scanned_service",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 5
+    }
+  },
+  {
+    "name": "canary_file_access",
+    "domain": "deception",
+    "severity": 0.97,
+    "mitre": [
+      "T1059"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Exploitation"
+    ],
+    "compliance": [
+      "ISO27001.A.8"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "data_access",
+      "infrastructure": "honeypot_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 6
+    }
+  },
+  {
+    "name": "fake_credential_used",
+    "domain": "deception",
+    "severity": 0.92,
+    "mitre": [
+      "T1078"
+    ],
+    "stride": [
+      "Repudiation",
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Installation"
+    ],
+    "compliance": [
+      "ISO27001.A.9"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_use",
+      "infrastructure": "auth_service",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "tripwire_triggered",
+    "domain": "deception",
+    "severity": 0.88,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "probe",
+      "infrastructure": "tripwire",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "smb_canary_access",
+    "domain": "deception",
+    "severity": 0.93,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [
+      "ISO27001.A.12.4"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "file_access",
+      "infrastructure": "smb_share",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 6
+    }
+  },
+  {
+    "name": "package_installation_on_honeypot",
+    "domain": "deception",
+    "severity": 0.86,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Installation"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "tooling",
+      "infrastructure": "honeypot_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 5
+    }
+  },
+  {
+    "name": "high_frequency_honeypot_hits",
+    "domain": "deception",
+    "severity": 0.9,
+    "mitre": [],
+    "stride": [
+      "Reconnaissance"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "automated_scanning",
+      "infrastructure": "botnet",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "credential_harvest_page_interaction",
+    "domain": "deception",
+    "severity": 0.9,
+    "mitre": [],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "CredentialAccess"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_harvest",
+      "infrastructure": "web_honeypot",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "browser_autofill_honeypot_use_2",
+    "domain": "deception",
+    "severity": 0.86,
+    "mitre": [],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "CredentialAccess"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_harvest",
+      "infrastructure": "web_honeypot",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "honeycred_use_across_hosts",
+    "domain": "deception",
+    "severity": 0.94,
+    "mitre": [
+      "T1078"
+    ],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "LateralMovement"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_reuse",
+      "infrastructure": "multiple_hosts",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "fake_dom_honeypot_interaction",
+    "domain": "deception",
+    "severity": 0.9,
+    "mitre": [],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "recon",
+      "infrastructure": "web_honeypot",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "fake_api_endpoint_probe",
+    "domain": "deception",
+    "severity": 0.85,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "probe",
+      "infrastructure": "api_endpoint",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  }
+]

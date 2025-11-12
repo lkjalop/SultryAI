@@ -1,0 +1,54 @@
+[
+  {
+    "name": "unexpected_apt_like_indicator",
+    "domain": "threatintel",
+    "severity": 0.95,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {
+      "adversary": "suspected_apt",
+      "capability": "advanced_ops",
+      "infrastructure": "multiple_hosts",
+      "victim": null
+    },
+    "dread": {
+      "damage": 10,
+      "repro": 9
+    }
+  },
+  {
+    "name": "rare_apt_tool_signature",
+    "domain": "threatintel",
+    "severity": 0.96,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {
+      "adversary": "suspected_apt",
+      "capability": "tooling",
+      "infrastructure": "hosts",
+      "victim": null
+    },
+    "dread": {
+      "damage": 10,
+      "repro": 9
+    }
+  },
+  {
+    "name": "unexpected_ip_reputation_shift",
+    "domain": "threatintel",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  }
+]

@@ -1,0 +1,1102 @@
+[
+  {
+    "name": "beacon_like_traffic",
+    "domain": "network",
+    "severity": 0.85,
+    "mitre": [
+      "T1002",
+      "T1071"
+    ],
+    "stride": [
+      "Denial"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "ISO27001.A.12.4",
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "c2",
+      "infrastructure": "external_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "rare_port_usage",
+    "domain": "network",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [
+      "InformationDisclosure"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [
+      "CIS:Mitigation1"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "lateral_movement",
+      "infrastructure": "odd_port",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "suspicious_dns_tld",
+    "domain": "network",
+    "severity": 0.72,
+    "mitre": [
+      "T1566"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "infrastructure",
+      "infrastructure": "suspicious_domain",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "nxdomain_spike",
+    "domain": "network",
+    "severity": 0.66,
+    "mitre": [],
+    "stride": [
+      "Denial"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "probing",
+      "infrastructure": "dns_infra",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "external_data_transfer",
+    "domain": "network",
+    "severity": 0.8,
+    "mitre": [
+      "T1041"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "GDPR:DataExfiltration",
+      "ISO27001.A.8"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltration",
+      "infrastructure": "remote_storage",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 7
+    }
+  },
+  {
+    "name": "suspicious_user_agent",
+    "domain": "network",
+    "severity": 0.5,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "obfuscation",
+      "infrastructure": "client_software",
+      "victim": null
+    },
+    "dread": {
+      "damage": 3,
+      "repro": 3
+    }
+  },
+  {
+    "name": "web_form_exfil",
+    "domain": "network",
+    "severity": 0.82,
+    "mitre": [
+      "T1041"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "data_exfil",
+      "infrastructure": "web_endpoint",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "tls_anomaly",
+    "domain": "network",
+    "severity": 0.62,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "evasion",
+      "infrastructure": "tls_layer",
+      "victim": null
+    },
+    "dread": {
+      "damage": 4,
+      "repro": 3
+    }
+  },
+  {
+    "name": "covert_channel_detection",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [
+      "T1024"
+    ],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "covert_comms",
+      "infrastructure": "network",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "high_entropy_url",
+    "domain": "network",
+    "severity": 0.68,
+    "mitre": [],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "malicious_payload",
+      "infrastructure": "url",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "repeated_probe_from_same_asn",
+    "domain": "network",
+    "severity": 0.62,
+    "mitre": [],
+    "stride": [
+      "Reconnaissance"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "mass_scan",
+      "infrastructure": "asn",
+      "victim": null
+    },
+    "dread": {
+      "damage": 4,
+      "repro": 3
+    }
+  },
+  {
+    "name": "dns_tunnel_signature",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [
+      "T1572"
+    ],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "covert_channel",
+      "infrastructure": "dns",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "unusual_outbound_volume",
+    "domain": "network",
+    "severity": 0.8,
+    "mitre": [
+      "T1041"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "GDPR:DataExfiltration"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltrate",
+      "infrastructure": "network",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "weird_user_agent_and_cookie_combo",
+    "domain": "network",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "fingerprinting",
+      "infrastructure": "client",
+      "victim": null
+    },
+    "dread": {
+      "damage": 3,
+      "repro": 3
+    }
+  },
+  {
+    "name": "beacon_like_traffic",
+    "domain": "network",
+    "severity": 0.85,
+    "mitre": [
+      "T1002",
+      "T1071"
+    ],
+    "stride": [
+      "Denial"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "ISO27001.A.12.4",
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "c2",
+      "infrastructure": "external_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "rare_port_usage",
+    "domain": "network",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [
+      "InformationDisclosure"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [
+      "CIS:Mitigation1"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "lateral_movement",
+      "infrastructure": "odd_port",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "suspicious_dns_tld",
+    "domain": "network",
+    "severity": 0.72,
+    "mitre": [
+      "T1566"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "infrastructure",
+      "infrastructure": "suspicious_domain",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "nxdomain_spike",
+    "domain": "network",
+    "severity": 0.66,
+    "mitre": [],
+    "stride": [
+      "Denial"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "probing",
+      "infrastructure": "dns_infra",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "external_data_transfer",
+    "domain": "network",
+    "severity": 0.8,
+    "mitre": [
+      "T1041"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "GDPR:DataExfiltration",
+      "ISO27001.A.8"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltration",
+      "infrastructure": "remote_storage",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 7
+    }
+  },
+  {
+    "name": "suspicious_user_agent",
+    "domain": "network",
+    "severity": 0.5,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "obfuscation",
+      "infrastructure": "client_software",
+      "victim": null
+    },
+    "dread": {
+      "damage": 3,
+      "repro": 3
+    }
+  },
+  {
+    "name": "web_form_exfil",
+    "domain": "network",
+    "severity": 0.82,
+    "mitre": [
+      "T1041"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "data_exfil",
+      "infrastructure": "web_endpoint",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "tls_anomaly",
+    "domain": "network",
+    "severity": 0.62,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "evasion",
+      "infrastructure": "tls_layer",
+      "victim": null
+    },
+    "dread": {
+      "damage": 4,
+      "repro": 3
+    }
+  },
+  {
+    "name": "covert_channel_detection",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [
+      "T1024"
+    ],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "covert_comms",
+      "infrastructure": "network",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "high_entropy_url",
+    "domain": "network",
+    "severity": 0.68,
+    "mitre": [],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "malicious_payload",
+      "infrastructure": "url",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "repeated_probe_from_same_asn",
+    "domain": "network",
+    "severity": 0.62,
+    "mitre": [],
+    "stride": [
+      "Reconnaissance"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "mass_scan",
+      "infrastructure": "asn",
+      "victim": null
+    },
+    "dread": {
+      "damage": 4,
+      "repro": 3
+    }
+  },
+  {
+    "name": "dns_tunnel_signature",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [
+      "T1572"
+    ],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "covert_channel",
+      "infrastructure": "dns",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "unusual_outbound_volume",
+    "domain": "network",
+    "severity": 0.8,
+    "mitre": [
+      "T1041"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "GDPR:DataExfiltration"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltrate",
+      "infrastructure": "network",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "weird_user_agent_and_cookie_combo",
+    "domain": "network",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "fingerprinting",
+      "infrastructure": "client",
+      "victim": null
+    },
+    "dread": {
+      "damage": 3,
+      "repro": 3
+    }
+  },
+  {
+    "name": "malformed_payload_stats",
+    "domain": "network",
+    "severity": 0.58,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 3,
+      "repro": 3
+    }
+  },
+  {
+    "name": "odd_smb_command_sequence",
+    "domain": "network",
+    "severity": 0.77,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "smb_abuse",
+      "infrastructure": "smb_service",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "command_and_control_beaconing_periodic",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [
+      "T1071"
+    ],
+    "stride": [
+      "Denial"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "c2",
+      "infrastructure": "external_host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "email_phishing_interaction",
+    "domain": "network",
+    "severity": 0.85,
+    "mitre": [
+      "T1566"
+    ],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [
+      "GDPR:UserData"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "social_eng",
+      "infrastructure": "email",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 6
+    }
+  },
+  {
+    "name": "side_channel_indicator",
+    "domain": "network",
+    "severity": 0.78,
+    "mitre": [],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "covert_channel",
+      "infrastructure": "protocol_abuse",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 5
+    }
+  },
+  {
+    "name": "ssh_banner_fingerprint_mismatch",
+    "domain": "network",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "fingerprinting",
+      "infrastructure": "ssh_service",
+      "victim": null
+    },
+    "dread": {
+      "damage": 3,
+      "repro": 3
+    }
+  },
+  {
+    "name": "unexpected_ssh_forwarding_2",
+    "domain": "network",
+    "severity": 0.8,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "LateralMovement"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "pivot",
+      "infrastructure": "ssh_tunnel",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "dns_exfil_pattern",
+    "domain": "network",
+    "severity": 0.93,
+    "mitre": [
+      "T1041",
+      "T1071"
+    ],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltration",
+      "infrastructure": "dns",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "large_scale_scanning_activity",
+    "domain": "network",
+    "severity": 0.75,
+    "mitre": [],
+    "stride": [
+      "Reconnaissance"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "scanning",
+      "infrastructure": "botnet",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "vulnerability_probe_chain",
+    "domain": "network",
+    "severity": 0.8,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [
+      "Reconnaissance",
+      "Delivery"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "exploit_chain",
+      "infrastructure": "remote_hosts",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "smb_lateral_movement",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [
+      "T1021"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "LateralMovement"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "lateral_movement",
+      "infrastructure": "smb",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "encrypted_payload_upload",
+    "domain": "network",
+    "severity": 0.88,
+    "mitre": [],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "Delivery"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "payload_delivery",
+      "infrastructure": "storage",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "unexpected_dns_ttl_changes",
+    "domain": "network",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 3,
+      "repro": 2
+    }
+  },
+  {
+    "name": "ssh_bruteforce_large_scale",
+    "domain": "network",
+    "severity": 0.86,
+    "mitre": [
+      "T1110"
+    ],
+    "stride": [
+      "Spoofing"
+    ],
+    "kill_chain": [
+      "Reconnaissance"
+    ],
+    "compliance": [
+      "CIS:Mitigation5"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_guess",
+      "infrastructure": "botnet",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "malicious_powerc2_indicator_2",
+    "domain": "network",
+    "severity": 0.9,
+    "mitre": [],
+    "stride": [
+      "Repudiation"
+    ],
+    "kill_chain": [
+      "CommandAndControl"
+    ],
+    "compliance": [
+      "NIST-RMF:DETECT"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "c2",
+      "infrastructure": "external_endpoint",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "suspicious_ssh_agent_forwarding",
+    "domain": "network",
+    "severity": 0.78,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "LateralMovement"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "pivot",
+      "infrastructure": "ssh_agent",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "odd_user_agent_timing",
+    "domain": "network",
+    "severity": 0.58,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 3,
+      "repro": 2
+    }
+  },
+  {
+    "name": "unexpected_subnet_traffic",
+    "domain": "network",
+    "severity": 0.74,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  }
+]

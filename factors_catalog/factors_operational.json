@@ -1,0 +1,44 @@
+[
+  {
+    "name": "heartbeat_dropouts_from_sensor",
+    "domain": "operational",
+    "severity": 0.65,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 4,
+      "repro": 3
+    }
+  },
+  {
+    "name": "unexpected_service_restart",
+    "domain": "operational",
+    "severity": 0.6,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 4,
+      "repro": 3
+    }
+  },
+  {
+    "name": "artifactual_latency_spike",
+    "domain": "operational",
+    "severity": 0.55,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 2,
+      "repro": 2
+    }
+  }
+]

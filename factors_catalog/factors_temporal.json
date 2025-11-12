@@ -1,0 +1,44 @@
+[
+  {
+    "name": "anomalous_ewma_spike",
+    "domain": "temporal",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "anomalous_ewma_spike",
+    "domain": "temporal",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "significant_ewma_drift",
+    "domain": "temporal",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [],
+    "kill_chain": [],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  }
+]

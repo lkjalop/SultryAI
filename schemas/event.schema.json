@@ -1,0 +1,26 @@
+{
+  "$id": "https://sultry.ai/schemas/event.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sultry Event",
+  "type": "object",
+  "required": ["event_id","timestamp","sensor_id","sensor_type","event_type"],
+  "properties": {
+    "event_id": {"type":"string","format":"uuid"},
+    "timestamp": {"type":"string","format":"date-time"},
+    "sensor_id": {"type":"string"},
+    "sensor_type": {"type":"string","enum":["web","ssh","smb","rdp","canary_file","ldap","email","other"]},
+    "event_type": {"type":"string"},
+    "src_ip": {"type":["string","null"]},
+    "src_port": {"type":["integer","null"]},
+    "dst_ip": {"type":["string","null"]},
+    "dst_port": {"type":["integer","null"]},
+    "dst_service": {"type":["string","null"]},
+    "user": {"type":["string","null"]},
+    "artifact": {"type":["string","null"]},
+    "raw_hash": {"type":["string","null"]},
+    "payload_ref": {"type":["string","null","object"]},
+    "schema_version": {"type":"string","default":"1.0"},
+    "meta": {"type":"object"}
+  },
+  "additionalProperties": true
+}

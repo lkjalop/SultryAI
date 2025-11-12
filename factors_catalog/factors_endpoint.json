@@ -1,0 +1,802 @@
+[
+  {
+    "name": "lolbin_detected",
+    "domain": "endpoint",
+    "severity": 0.78,
+    "mitre": [
+      "T1218"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6",
+      "NIST-RMF:RESPOND"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "evasion",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 6
+    }
+  },
+  {
+    "name": "credential_dump_attempt",
+    "domain": "endpoint",
+    "severity": 0.95,
+    "mitre": [
+      "T1003"
+    ],
+    "stride": [
+      "Repudiation",
+      "Elevation"
+    ],
+    "kill_chain": [
+      "ActionsOnObjectives"
+    ],
+    "compliance": [
+      "PCI-DSS:6.1",
+      "ISO27001.A.9"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_access",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "rare_process_lineage",
+    "domain": "endpoint",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "process_tree",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "suspicious_process_creation",
+    "domain": "endpoint",
+    "severity": 0.77,
+    "mitre": [
+      "T1055"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "execution",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 6
+    }
+  },
+  {
+    "name": "sensitive_file_download",
+    "domain": "endpoint",
+    "severity": 0.88,
+    "mitre": [
+      "T1005"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "GDPR:DataExfiltration",
+      "HIPAA:SecurityRule",
+      "ISO27001.A.8"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltration",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 7
+    }
+  },
+  {
+    "name": "fileless_payload_detected_2",
+    "domain": "endpoint",
+    "severity": 0.9,
+    "mitre": [
+      "T1055",
+      "T1204"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {},
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "suspicious_cmdline_args",
+    "domain": "endpoint",
+    "severity": 0.74,
+    "mitre": [
+      "T1059"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "command_exec",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "process_hollowing_signature",
+    "domain": "endpoint",
+    "severity": 0.92,
+    "mitre": [
+      "T1055"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "process_injection",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "suspicious_registry_change",
+    "domain": "endpoint",
+    "severity": 0.8,
+    "mitre": [
+      "T1112"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "registry",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "unexpected_privileged_process",
+    "domain": "endpoint",
+    "severity": 0.86,
+    "mitre": [
+      "T1068"
+    ],
+    "stride": [
+      "Elevation"
+    ],
+    "kill_chain": [
+      "PrivilegeEscalation"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "privilege_escalation",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "lolbin_detected",
+    "domain": "endpoint",
+    "severity": 0.78,
+    "mitre": [
+      "T1218"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6",
+      "NIST-RMF:RESPOND"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "evasion",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 6
+    }
+  },
+  {
+    "name": "credential_dump_attempt",
+    "domain": "endpoint",
+    "severity": 0.95,
+    "mitre": [
+      "T1003"
+    ],
+    "stride": [
+      "Repudiation",
+      "Elevation"
+    ],
+    "kill_chain": [
+      "ActionsOnObjectives"
+    ],
+    "compliance": [
+      "PCI-DSS:6.1",
+      "ISO27001.A.9"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "credential_access",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "rare_process_lineage",
+    "domain": "endpoint",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "process_tree",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "suspicious_process_creation",
+    "domain": "endpoint",
+    "severity": 0.77,
+    "mitre": [
+      "T1055"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "execution",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 6
+    }
+  },
+  {
+    "name": "sensitive_file_download",
+    "domain": "endpoint",
+    "severity": 0.88,
+    "mitre": [
+      "T1005"
+    ],
+    "stride": [
+      "InfoDisclosure"
+    ],
+    "kill_chain": [
+      "Exfiltration"
+    ],
+    "compliance": [
+      "GDPR:DataExfiltration",
+      "HIPAA:SecurityRule",
+      "ISO27001.A.8"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "exfiltration",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 7
+    }
+  },
+  {
+    "name": "fileless_payload_detected_2",
+    "domain": "endpoint",
+    "severity": 0.9,
+    "mitre": [
+      "T1055",
+      "T1204"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {},
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "suspicious_cmdline_args",
+    "domain": "endpoint",
+    "severity": 0.74,
+    "mitre": [
+      "T1059"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "command_exec",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "process_hollowing_signature",
+    "domain": "endpoint",
+    "severity": 0.92,
+    "mitre": [
+      "T1055"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "process_injection",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "suspicious_registry_change",
+    "domain": "endpoint",
+    "severity": 0.8,
+    "mitre": [
+      "T1112"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "registry",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "unexpected_privileged_process",
+    "domain": "endpoint",
+    "severity": 0.86,
+    "mitre": [
+      "T1068"
+    ],
+    "stride": [
+      "Elevation"
+    ],
+    "kill_chain": [
+      "PrivilegeEscalation"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "privilege_escalation",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 8,
+      "repro": 7
+    }
+  },
+  {
+    "name": "ransomware_indicator_file_activity_2",
+    "domain": "endpoint",
+    "severity": 0.95,
+    "mitre": [
+      "T1486"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "ActionsOnObjectives"
+    ],
+    "compliance": [
+      "ISO27001.A.12.3"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "ransomware",
+      "infrastructure": "host_fs",
+      "victim": null
+    },
+    "dread": {
+      "damage": 10,
+      "repro": 9
+    }
+  },
+  {
+    "name": "persistence_mechanism_detected",
+    "domain": "endpoint",
+    "severity": 0.9,
+    "mitre": [
+      "T1547"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "malicious_power_shell_command",
+    "domain": "endpoint",
+    "severity": 0.9,
+    "mitre": [
+      "T1059.001"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "command_exec",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "signed_binary_anomaly",
+    "domain": "endpoint",
+    "severity": 0.86,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "binary_tamper",
+      "infrastructure": "host_fs",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "suspicious_registry_persistence",
+    "domain": "endpoint",
+    "severity": 0.8,
+    "mitre": [
+      "T1547"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "registry",
+      "victim": null
+    },
+    "dread": {
+      "damage": 7,
+      "repro": 6
+    }
+  },
+  {
+    "name": "weird_cron_job_creation",
+    "domain": "endpoint",
+    "severity": 0.72,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "scheduler",
+      "victim": null
+    },
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  },
+  {
+    "name": "anomalous_file_permission_change",
+    "domain": "endpoint",
+    "severity": 0.75,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Installation"
+    ],
+    "compliance": [],
+    "diamond": {
+      "adversary": null,
+      "capability": "tamper_fs",
+      "infrastructure": "host_fs",
+      "victim": null
+    },
+    "dread": {
+      "damage": 6,
+      "repro": 5
+    }
+  },
+  {
+    "name": "persistence_via_scheduled_task",
+    "domain": "endpoint",
+    "severity": 0.88,
+    "mitre": [
+      "T1053"
+    ],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "persistence",
+      "infrastructure": "scheduler",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 7
+    }
+  },
+  {
+    "name": "kernel_exploit_signature",
+    "domain": "endpoint",
+    "severity": 0.98,
+    "mitre": [],
+    "stride": [
+      "Elevation"
+    ],
+    "kill_chain": [
+      "Execution"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "kernel_exploit",
+      "infrastructure": "host_kernel",
+      "victim": null
+    },
+    "dread": {
+      "damage": 10,
+      "repro": 9
+    }
+  },
+  {
+    "name": "privilege_escalation_attempt",
+    "domain": "endpoint",
+    "severity": 0.9,
+    "mitre": [
+      "T1068"
+    ],
+    "stride": [
+      "Elevation"
+    ],
+    "kill_chain": [
+      "PrivilegeEscalation"
+    ],
+    "compliance": [
+      "ISO27001.A.12.6"
+    ],
+    "diamond": {
+      "adversary": null,
+      "capability": "privilege_escalation",
+      "infrastructure": "host",
+      "victim": null
+    },
+    "dread": {
+      "damage": 9,
+      "repro": 8
+    }
+  },
+  {
+    "name": "unusual_file_renames",
+    "domain": "endpoint",
+    "severity": 0.7,
+    "mitre": [],
+    "stride": [
+      "Tampering"
+    ],
+    "kill_chain": [
+      "Persistence"
+    ],
+    "compliance": [],
+    "diamond": {},
+    "dread": {
+      "damage": 5,
+      "repro": 4
+    }
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "deception": {
+    "file": "factors_deception.json",
+    "count": 19
+  },
+  "network": {
+    "file": "factors_network.json",
+    "count": 46
+  },
+  "endpoint": {
+    "file": "factors_endpoint.json",
+    "count": 31
+  },
+  "identity": {
+    "file": "factors_identity.json",
+    "count": 16
+  },
+  "cloud": {
+    "file": "factors_cloud.json",
+    "count": 11
+  },
+  "temporal": {
+    "file": "factors_temporal.json",
+    "count": 3
+  },
+  "supply_chain": {
+    "file": "factors_supply_chain.json",
+    "count": 6
+  },
+  "application": {
+    "file": "factors_application.json",
+    "count": 6
+  },
+  "operational": {
+    "file": "factors_operational.json",
+    "count": 3
+  },
+  "threatintel": {
+    "file": "factors_threatintel.json",
+    "count": 3
+  }
+}
