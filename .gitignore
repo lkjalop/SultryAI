@@ -1,0 +1,33 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite DB
+data/
+*.db
+*.sqlite
+
+# pytest
+.pytest_cache/
+coverage/
+htmlcov/
+
+# Editor/temp files
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+desktop.ini
+
+# Local config
+.env
+.env.*
+
+# Claude/agent artifacts
+.claude/
