@@ -1,0 +1,6 @@
+{
+  "metrics": {
+    "p95_upsert_ms": 10.0,
+    "p95_search_ms": 5.0
+  }
+}
