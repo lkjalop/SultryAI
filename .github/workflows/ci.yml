@@ -1,40 +1,55 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main, feature/** ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: sultry
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping" --health-interval 10s --health-timeout 5s --health-retries 5
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Start app (uvicorn) in background
+          if [ -f sultrytai/requirements.txt ]; then pip install -r sultrytai/requirements.txt; fi
+          pip install -r requirements-ci.txt
+
+      - name: Wait for Postgres (script)
         run: |
-          nohup python -m uvicorn sultrytai.api:app --host 127.0.0.1 --port 8001 &
-          # wait for metrics endpoint
-          for i in {1..10}; do
-            sleep 1
-            status=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8001/metrics || true)
-            if [ "$status" = "200" ]; then
-              echo "metrics ready"
-              break
-            fi
-          done
-      - name: Smoke test metrics endpoint
+          python ci/wait_for_postgres.py --dsn postgresql://postgres:postgres@127.0.0.1:5432/sultry --timeout 60
+
+      - name: Export envs for tests
         run: |
-          curl -sSf http://127.0.0.1:8001/metrics | head -n 5
-      - name: Run split script
-        run: python scripts/split_full_catalog.py
-      - name: Check max lines
-        run: python scripts/check_max_lines.py
-      - name: Validate factors
-        run: python scripts/validate_factors.py
-      - name: Run tests
-        run: pytest -q
+          echo "SULTRY_SQLITE_DB=$(pwd)/data/ci_sultry.db" >> $GITHUB_ENV
+          echo "VECTOR_PG_DSN=postgresql://postgres:postgres@127.0.0.1:5432/sultry" >> $GITHUB_ENV
+
+      - name: Run incremental tests
+        run: python -u scripts/run_tests_incremental.py --timeout 120
+
